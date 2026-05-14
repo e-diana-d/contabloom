@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ContaBloom | Contabilidad paso a paso</title>
+
+    <!-- Descripción que aparece en Google -->
+    <meta 
+        name="description" 
+        content="ContaBloom es una plataforma educativa para aprender asientos contables paso a paso. Explora operaciones empresariales y entiende la partida doble de forma simple e interactiva."
+    >
+    <meta name="author" content="ContaBloom Team">
+    <meta name="copyright" content="ContaBloom 2026">
+    <meta name="robots" content="index, follow">
+
+    <!-- Compartir enlaces -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ContaBloom | Contabilidad paso a paso">
+    <meta property="og:description" content="ContaBloom es una plataforma educativa para aprender asientos contables paso a paso.">
+    <meta property="og:image" content="/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_PE">
+    <meta property="og:image:alt" content="ContaBloom - Aprende asientos contables paso a paso">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="theme-color" content="#1D9E75">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-10DGR4YPRR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-10DGR4YPRR');
+    </script>
+</head>
+<body>
+    <header>
+        <div class="branding">
+            <a href="/" class="branding-link" aria-label="ContaBloom - Ir al inicio">
+                <div class="isotipo">
+                    <svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="8"  y="48" width="12" height="16" rx="3" fill="#c5d3df"/>
+                        <rect x="24" y="36" width="12" height="28" rx="3" fill="#9aafc2"/>
+                        <rect x="40" y="22" width="12" height="42" rx="3" fill="#6f7f93"/>
+
+                        <line x1="46" y1="22" x2="46" y2="10" stroke="#4e5f70" stroke-width="2.5" stroke-linecap="round"/>
+
+                        <ellipse cx="46" cy="7"  rx="5" ry="7" fill="#c4a8b2" transform="rotate(-35 46 7)"/>
+                        <ellipse cx="46" cy="7"  rx="5" ry="7" fill="#f3ecef" transform="rotate(35 46 7)"/>
+                        <ellipse cx="38" cy="10" rx="4" ry="6" fill="#c4a8b2" transform="rotate(-80 38 10)"/>
+                        <ellipse cx="54" cy="10" rx="4" ry="6" fill="#f3ecef" transform="rotate(80 54 10)"/>
+
+                        <circle cx="46" cy="10" r="5" fill="#1e1f26"/>
+                    </svg>
+                </div>
+                <h1 class="logotipo">ContaBloom</h1>
+            </a>
+            <p class="subtitle">
+                Aprende asientos contables sin complicaciones
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Sección: Operaciones -->
+        <section id="operaciones" class="card" aria-labelledby="operaciones-titulo">
+
+            <div class="card-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon-svg" aria-hidden="true" focusable="false">
+                    <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+                    <line x1="8" y1="6" x2="16" y2="6"/>
+                    <line x1="16" y1="14" x2="16" y2="18"/>
+                    <path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/>
+                    <path d="M12 14h.01"/><path d="M8 14h.01"/>
+                    <path d="M12 18h.01"/><path d="M8 18h.01"/>
+                </svg>
+                <h2 id="operaciones-titulo">Asientos contables</h2>
+            </div>
+
+            <p id="operaciones-descripcion">
+                Explora asientos contables básicos paso a paso.
+            </p>
+
+            <div class="form-group">
+                <label for="operacion-select">Selecciona una operación:</label>
+                <select
+                    id="operacion-select"
+                    name="operacion"
+                    aria-describedby="operaciones-descripcion"
+                    autocomplete="off">
+
+                    <option value="" disabled selected>
+                        -- Elige una operación --
+                    </option>
+
+                    <optgroup label="Compras y gastos">
+                        <option 
+                            value="compra_mercaderia_contado"
+                            data-tags="compra mercaderia contado efectivo caja igv factura inventario">
+                            Compra de mercadería al contado
+                        </option>
+                        <option 
+                            value="compra_mercaderia_credito"
+                            data-tags="compra mercaderia credito proveedor deuda factura cuentas por pagar igv">
+                            Compra de mercadería al crédito
+                        </option>
+                        <option 
+                            value="compra_activo_fijo"
+                            data-tags="activo fijo computadora equipo oficina compra depreciacion">
+                            Compra de activo fijo (computadora)
+                        </option>
+                        <option 
+                            value="pago_servicios_basicos"
+                            data-tags="servicios basicos agua luz telefono internet gasto factura">
+                            Pago de servicios básicos
+                        </option>
+                        <option 
+                            value="pago_alquiler_oficina"
+                            data-tags="alquiler oficina renta arrendamiento gasto local">
+                            Pago de alquiler de oficina
+                        </option>
+                    </optgroup>
+
+                    <optgroup label="Ventas">
+                        <option 
+                            value="venta_mercaderia_contado"
+                            data-tags="venta mercaderia contado efectivo caja ingreso cliente igv">
+                            Venta de mercadería al contado
+                        </option>
+                        <option 
+                            value="venta_mercaderia_credito"
+                            data-tags="venta mercaderia credito cliente cuentas por cobrar factura ingreso igv">
+                            Venta de mercadería al crédito
+                        </option>
+                    </optgroup>
+
+                    <optgroup label="Cobros y pagos">
+                        <option 
+                            value="cobro_factura_credito"
+                            data-tags="cobro cliente factura credito banco caja cuentas por cobrar">
+                            Cobro de factura al crédito
+                        </option>
+                        <option 
+                            value="pago_factura_credito"
+                            data-tags="pago proveedor factura credito banco caja cuentas por pagar">
+                            Pago de factura al crédito
+                        </option>
+                    </optgroup>
+
+                    <optgroup label="Otros">
+                        <option 
+                            value="depreciacion_activo_fijo"
+                            data-tags="depreciacion gasto activo fijo desgaste acumulada">
+                            Depreciación de activo fijo
+                        </option>
+                        <option 
+                            value="planilla_sueldos"
+                            data-tags="planilla sueldos trabajadores remuneraciones onp afp essalud">
+                            Planilla de sueldos
+                        </option>
+                        <option 
+                            value="retiro_banco_para_caja"
+                            data-tags="banco caja efectivo retiro">
+                            Retiro de banco para caja
+                        </option>
+                    </optgroup>
+
+                </select>
+            </div>
+
+            <div
+                id="flujo-contenedor"
+                class="hidden"
+                role="region"
+                aria-label="Flujo de la operación"
+                aria-live="polite">
+
+                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progreso del flujo">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+
+                <div id="paso-actual-card" class="paso-card">
+                    <!-- Se inyecta dinámicamente desde JS -->
+                </div>
+
+                <div class="flujo-actions">
+                    <button id="btn-anterior" class="btn-secondary" type="button" disabled>
+                        ← Paso anterior
+                    </button>
+                    <button id="btn-siguiente" class="btn-primary" type="button" disabled>
+                        Siguiente paso →
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 ContaBloom. Aprende contabilidad paso a paso.</p>
+        </div>
+    </footer>
+</body>
+</html>
